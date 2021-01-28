@@ -1,8 +1,5 @@
-# Author: Mark Patton
-# Website: https://markpatton.cloud
-# GitHub: mark-patton
-
 name: Format Terraform Syntax
+author: Mark Patton - https://markpatton.cloud
 description: This Action Formats Terraform Syntax on creation of a Pull-Request
 branding:
   icon: 'award'  
@@ -11,7 +8,7 @@ branding:
 on:
   # Commences on Pull Request to the following branches
   pull_request:
-    branches: [ master, release ]
+    branches: [ master, main, release ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,8 +33,9 @@ jobs:
         uses: EndBug/add-and-commit@v5.1.0
         with:
           add: '.'
+          # Update as appropriate
           author_name: 'DevOps-Bot'
-          author_email: 'mark.patton@live.co.uk'
+          author_email: 'your@email.here'
           branch: # optional
           cwd: # optional, default is .
           message: 'Formatting Terraform syntax'
