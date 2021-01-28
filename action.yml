@@ -1,4 +1,4 @@
-name: Format Terraform Syntax
+name: Format Terraform
 author: Mark Patton - https://markpatton.cloud
 description: This Action Formats Terraform Syntax on creation of a Pull-Request
 branding:
