@@ -35,7 +35,7 @@ jobs:
           add: '.'
           # Update as appropriate
           author_name: 'DevOps-Bot'
-          author_email: 'your@email.here'
+          author_email: 'contact@markpatton.cloud'
           branch: # optional
           cwd: # optional, default is .
           message: 'Formatting Terraform syntax'
