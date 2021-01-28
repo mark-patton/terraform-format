@@ -3,6 +3,7 @@
 # GitHub: mark-patton
 
 name: Format Terraform Syntax
+icon: align-left
 
 on:
   # Commences on Pull Request to the following branches
