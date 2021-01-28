@@ -1,0 +1,39 @@
+# Author: Mark Patton
+# Website: https://markpatton.cloud
+# GitHub: mark-patton
+
+name: Format Terraform Syntax
+
+on:
+  # Commences on Pull Request to the following branches
+  pull_request:
+    branches: [ master, release ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+
+jobs:
+
+  build:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out repository
+      - uses: actions/checkout@v2
+
+      # Format Terraform across all files
+      - name: Terraform Format
+        run: terraform fmt -recursive
+      
+      # Add and Commit any changes
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v5.1.0
+        with:
+          add: '.'
+          author_name: 'DevOps-Bot'
+          author_email: 'mark.patton@live.co.uk'
+          branch: # optional
+          cwd: # optional, default is .
+          message: 'Formatting Terraform syntax'
